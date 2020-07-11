@@ -52,7 +52,7 @@ function App() {
   return (
     <Fragment>
       <Header title="Weather APP" />
-      <div className="contenedor-form">
+      <div className="container-form">
         <div className="container">
           <div className="row">
             <div className="col m6 s12">

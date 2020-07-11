@@ -13,7 +13,7 @@ const Weather = ({ result }) => {
     <div className="card-panel white col s12">
       <div className="black-text">
         <h2>Clima en {name}</h2>
-        <p className="temperatura">
+        <p className="temperature">
           {parseFloat(main.temp - kelvin, 10).toFixed(1)} <span>&#x2103;</span>
         </p>
         <p>

@@ -34,17 +34,11 @@ input[type='text']:not(.browser-default):focus:not([readonly]) + label {
   color: white;
 }
 
-.contenedor-form {
+.container-form {
   padding: 3rem 0 1px 0;
   background-color: #03a9f4;
 }
-.mensaje {
-  text-align: center;
-  font-size: 2rem;
-}
-.buscador i {
-  width: 100%;
-}
+
 .error {
   padding: 1rem !important;
   color: white;
@@ -60,10 +54,10 @@ input[type='text']:not(.browser-default):focus:not([readonly]) + label {
   text-align: center;
   font-size: 1.4rem;
 }
-.temperatura {
+.temperature {
   font-size: 4rem !important;
 }
-.temperatura span {
+.temperature span {
   font-size: 2rem !important;
   vertical-align: super;
 }
