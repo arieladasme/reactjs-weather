@@ -38,6 +38,7 @@ function App() {
     if (query) {
       queryAPI()
     }
+    // eslint-disable-next-line
   }, [query])
 
   let component
