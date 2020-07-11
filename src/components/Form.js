@@ -6,6 +6,8 @@ const Form = () => {
     country: '',
   })
 
+  const [error, saveError] = useState(false)
+
   const { city, country } = search
 
   // save in started
@@ -13,8 +15,23 @@ const Form = () => {
     saveSearch({ ...search, [e.target.name]: e.target.value })
   }
 
+  // Form submit
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    // Validate
+    if (city.trim() === '' || country.trim() === '') {
+      saveError(true)
+      return
+    }
+    saveError(false)
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
+      {error ? (
+        <p className="red darken-4 error">Todos los campos son obligatorios</p>
+      ) : null}
       <div className="input-field col s12">
         <input
           type="text"
@@ -44,6 +61,13 @@ const Form = () => {
           <option value="PE">Perú</option>
         </select>
         <label htmlFor="country">Pais:</label>
+      </div>
+      <div className="input-field col s12">
+        <input
+          type="submit"
+          value="Buscar clima"
+          className="waves-effect waves-light btn-large btn-block yellow aaccent-4"
+        />
       </div>
     </form>
   )
