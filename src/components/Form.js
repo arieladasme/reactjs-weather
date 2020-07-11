@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 
-const Form = () => {
-  const [search, saveSearch] = useState({
-    city: '',
-    country: '',
-  })
-
+const Form = ({ search, saveSearch, saveQuery }) => {
   const [error, saveError] = useState(false)
 
   const { city, country } = search
@@ -25,6 +20,7 @@ const Form = () => {
       return
     }
     saveError(false)
+    saveQuery(true)
   }
 
   return (
